@@ -1,0 +1,137 @@
+🔹 Part 1 – Small Example (Bell State)
+
+Soch lo tumhare paas 2 qubits hain.
+Goal: un dono ko entangle karna (aise jodna ki unki state hamesha linked rahe).
+
+Steps:
+
+Circuit banao
+
+Pehle qubit pe Hadamard lagao → wo superposition me aa jaata hai.
+
+Fir CNOT lagao qubit 0 → qubit 1 par.
+👉 Ab dono qubits entangled hain (Bell pair).
+
+Optimize karo
+
+Real quantum hardware me directly circuit nahi chal sakta, kyunki uska apna layout aur connectivity hoti hai.
+
+Isliye transpile karte ho taki circuit hardware ke hisaab se adjust ho jaye.
+
+Run karo
+
+Estimator use karke expectation values nikaalo (matlab operators ke average measurement results).
+
+Analysis
+
+Agar circuit sahi bana, to tumhe ⟨ZZ⟩ aur ⟨XX⟩ dono ka result ~1 milega.
+
+Matlab: qubits entangled hain ✅
+
+🔹 Part 2 – Large Example (100-Qubit GHZ State)
+
+Ab imagine karo tum 100 qubits ek saath entangle karna chahte ho 😅
+Ye hai GHZ state (Greenberger–Horne–Zeilinger).
+
+Steps:
+
+Circuit banao
+
+Pehle qubit pe Hadamard lagao.
+
+Fir usko baaki 99 qubits ke saath ek ek karke CNOT se connect karo.
+👉 Sabhi qubits ek saath entangled ho jaate hain.
+
+Optimize for hardware
+
+Ab 100 qubits ka circuit bahut bada hai, aur hardware ke layout alag hote hain.
+
+Isliye transpiler fir se layout adjust karta hai.
+
+Run karo IBM ke real backend pe
+
+Simulator me 100 qubits chalana mushkil hai, isliye IBM ke real quantum computer par run karte ho.
+
+Error suppression aur mitigation bhi lagate ho (kyunki noise kaafi hoti hai).
+
+Analysis
+
+Tum check karte ho ki qubit 0 ka correlation baaki 99 qubits ke saath kaisa hai (⟨Z0Zi⟩).
+
+Graph plot karte ho → agar sab theek hai, correlation strong dikhna chahiye (par thoda noise ke wajah se girta hai).
+
+👉 Summary in Hinglish:
+
+Bell state = 2 qubits entangled (easy example).
+
+GHZ state = 100 qubits entangled (utility-scale, real hardware required).
+
+Dono cases me workflow same hai: map → optimize → execute → analyze.🔹 Part 1 – Small Example (Bell State)
+
+Soch lo tumhare paas 2 qubits hain.
+Goal: un dono ko entangle karna (aise jodna ki unki state hamesha linked rahe).
+
+Steps:
+
+Circuit banao
+
+Pehle qubit pe Hadamard lagao → wo superposition me aa jaata hai.
+
+Fir CNOT lagao qubit 0 → qubit 1 par.
+👉 Ab dono qubits entangled hain (Bell pair).
+
+Optimize karo
+
+Real quantum hardware me directly circuit nahi chal sakta, kyunki uska apna layout aur connectivity hoti hai.
+
+Isliye transpile karte ho taki circuit hardware ke hisaab se adjust ho jaye.
+
+Run karo
+
+Estimator use karke expectation values nikaalo (matlab operators ke average measurement results).
+
+Analysis
+
+Agar circuit sahi bana, to tumhe ⟨ZZ⟩ aur ⟨XX⟩ dono ka result ~1 milega.
+
+Matlab: qubits entangled hain ✅
+
+🔹 Part 2 – Large Example (100-Qubit GHZ State)
+
+Ab imagine karo tum 100 qubits ek saath entangle karna chahte ho 😅
+Ye hai GHZ state (Greenberger–Horne–Zeilinger).
+
+Steps:
+
+Circuit banao
+
+Pehle qubit pe Hadamard lagao.
+
+Fir usko baaki 99 qubits ke saath ek ek karke CNOT se connect karo.
+👉 Sabhi qubits ek saath entangled ho jaate hain.
+
+Optimize for hardware
+
+Ab 100 qubits ka circuit bahut bada hai, aur hardware ke layout alag hote hain.
+
+Isliye transpiler fir se layout adjust karta hai.
+
+Run karo IBM ke real backend pe
+
+Simulator me 100 qubits chalana mushkil hai, isliye IBM ke real quantum computer par run karte ho.
+
+Error suppression aur mitigation bhi lagate ho (kyunki noise kaafi hoti hai).
+
+Analysis
+
+Tum check karte ho ki qubit 0 ka correlation baaki 99 qubits ke saath kaisa hai (⟨Z0Zi⟩).
+
+Graph plot karte ho → agar sab theek hai, correlation strong dikhna chahiye (par thoda noise ke wajah se girta hai).
+
+👉 Summary in Hinglish:
+
+Bell state = 2 qubits entangled (easy example).
+
+GHZ state = 100 qubits entangled (utility-scale, real hardware required).
+
+Dono cases me workflow same hai: map → optimize → execute → analyze.
